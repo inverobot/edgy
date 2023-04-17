@@ -1,0 +1,23 @@
+---
+import { SITE } from "src/config.mjs";
+import { Seo } from "astro-seo-meta";
+---
+
+<Seo
+  title={SITE.title}
+  description={SITE.description}
+  keywords={["website", "blog", "astro"]}
+  icon="/favicon.ico"
+  themeColor="#000000"
+  colorScheme="light"
+  facebook={{
+    image: "/facebook.png",
+    url: "https://astro.build",
+    type: "website"
+  }}
+  twitter={{
+    image: "/twitter.png",
+    site: "@astrodotbuild",
+    card: "summary"
+  }}
+/>

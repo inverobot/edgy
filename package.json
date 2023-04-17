@@ -1,13 +1,19 @@
 {
   "name": "@wearevero/edgy",
+  "description": "The top layer Veronique homebase",
+  "homepage": "https://github.com/wearevero/edgy",
+  "license": "MIT",
+  "version": "0.66.99",
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "svelte-check": "svelte-check",
+    "prepare": "husky install",
+    "format": "npx prettier --w ."
   },
   "dependencies": {
     "@astrojs/prefetch": "^0.2.1",
@@ -16,8 +22,26 @@
     "@astrojs/tailwind": "^3.1.1",
     "@astrojs/vercel": "^3.2.4",
     "astro": "^2.3.0",
-    "install": "^0.13.0",
+    "astro-analytics": "^2.6.0",
+    "astro-compress": "^1.1.35",
+    "astro-imagetools": "^0.8.1",
+    "astro-seo-meta": "^2.0.0",
+    "astro-spa": "^1.3.9",
+    "astrojs-service-worker": "^1.0.0",
     "svelte": "^3.58.0",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.1",
+    "update": "^0.7.4"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "i": "^0.3.7",
+    "install": "^0.13.0",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "svelte-check": "^3.2.0"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
